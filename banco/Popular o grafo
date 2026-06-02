@@ -1,0 +1,29 @@
+CREATE EDGE Watch FROM (SELECT FROM User WHERE username = 'Maria Silva')
+TO (SELECT FROM Movie WHERE title = 'Cidade de Deus');
+
+CREATE EDGE Watch FROM (SELECT FROM User WHERE username = 'Maria Silva')
+TO (SELECT FROM Movie WHERE title = 'Coraline e o Mundo Secreto');
+
+CREATE EDGE Watch FROM (SELECT FROM User WHERE username = 'João da Costa')
+TO (SELECT FROM Movie WHERE title = 'Cidade de Deus');
+
+CREATE EDGE Watch FROM (SELECT FROM User WHERE username = 'João da Costa')
+TO (SELECT FROM Movie WHERE title = 'Carol');
+
+CREATE EDGE Watch FROM (SELECT FROM User WHERE username = 'Ana Souza')
+TO (SELECT FROM Movie WHERE title = 'Coraline e o Mundo Secreto');
+
+CREATE EDGE Watch FROM (SELECT FROM User WHERE username = 'Ana Souza')
+TO (SELECT FROM Movie WHERE title = 'Deu a Louca na Chapeuzinho');
+
+CREATE EDGE Watch FROM (SELECT FROM User WHERE username = 'José Miguel Pinheiro')
+TO (SELECT FROM Movie WHERE title = 'Cidade de Deus');
+
+CREATE EDGE Watch FROM (SELECT FROM User WHERE username = 'José Miguel Pinheiro')
+TO (SELECT FROM Movie WHERE title = 'O Poderoso Chefão');
+
+CREATE EDGE Watch FROM (SELECT FROM User WHERE username = 'José Miguel Pinheiro')
+TO (SELECT FROM Movie WHERE title = 'Central do Brasil');
+
+CREATE EDGE Watch FROM (SELECT FROM User WHERE username = 'João da Costa')
+TO (SELECT FROM Movie WHERE title = 'Central do Brasil');
