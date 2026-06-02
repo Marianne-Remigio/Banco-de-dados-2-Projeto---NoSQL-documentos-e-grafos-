@@ -1,7 +1,7 @@
 from crud.crud_filme import cadastrar_filme, listar_filmes, atualizar_filme, deletar_filme
 from crud.crud_usuario import cadastrar_usuario, listar_usuarios, atualizar_usuario, deletar_usuario
 from watch.watch import registrar_filme_assistido, listar_historico_usuario
-from recomendacao.recomendacao import recomendar_filmes
+from recomendacao.recomendacao import recomendar_filmes, recomendar_por_genero
 
 def menu_filmes():
     while True:
@@ -10,7 +10,6 @@ def menu_filmes():
         print("2 - Listar filmes")
         print("3 - Atualizar filme")
         print("4 - Deletar filme")
-        print("5 - Recomendar filmes")
         print("0 - Voltar")
 
         opcao = input("Escolha uma opção: ")
@@ -23,12 +22,11 @@ def menu_filmes():
             atualizar_filme()
         elif opcao == "4":
             deletar_filme()
-        elif opcao == "5":
-            recomendar_filmes()
         elif opcao == "0":
             break
         else:
             print("Opção inválida.")
+
 
 def menu_usuarios():
     while True:
@@ -54,12 +52,15 @@ def menu_usuarios():
         else:
             print("Opção inválida.")
 
+
 while True:
     print("\n=== SISTEMA DE RECOMENDAÇÃO DE FILMES ===")
     print("1 - Gerenciar filmes")
     print("2 - Gerenciar usuários")
     print("3 - Registrar filme assistido")
     print("4 - Ver histórico de usuário")
+    print("5 - Recomendar por usuários parecidos")
+    print("6 - Recomendar por gênero")
     print("0 - Sair")
 
     opcao = input("Escolha uma opção: ")
@@ -72,6 +73,10 @@ while True:
         registrar_filme_assistido()
     elif opcao == "4":
         listar_historico_usuario()
+    elif opcao == "5":
+        recomendar_filmes()
+    elif opcao == "6":
+        recomendar_por_genero()
     elif opcao == "0":
         print("Encerrando sistema...")
         break
